@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import { useConfig } from '../../hooks/useConfig';
+// import { useConfig } from '../../hooks/useConfig';
 import { usePayment } from '../../hooks/usePayment';
 import { Amount } from './Amount';
 import * as css from './Summary.module.pcss';
 
 export const Summary: FC = () => {
-    const { symbol } = useConfig();
+    // const { symbol } = useConfig();
     const { amount } = usePayment();
 
     return (
@@ -14,7 +14,7 @@ export const Summary: FC = () => {
             <div className={css.total}>
                 <div className={css.totalLeft}>Total</div>
                 <div className={css.totalRight}>
-                    <div className={css.symbol}>{symbol}</div>
+                    {/* <div className={css.symbol}>{symbol}</div>? */}
                     <div className={css.amount}>
                         <Amount amount={amount} />
                     </div>

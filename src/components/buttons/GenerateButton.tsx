@@ -20,7 +20,7 @@ export const GenerateButton: FC = () => {
             }}
             disabled={!amountRupiah || amountRupiah.isLessThanOrEqualTo(0)}
         >
-            Generate Payment Code
+            Convert to SOL and generate QR
         </button>
     );
 };

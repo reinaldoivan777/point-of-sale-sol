@@ -21,7 +21,7 @@ const NumPadButton: FC<NumPadInputButton> = ({ input, onInput }) => {
 };
 
 export const NumPad: FC = () => {
-    const { symbol, decimals } = useConfig();
+    const { decimals } = useConfig();
     const regExp = useMemo(() => new RegExp('^\\d*([.,]\\d{0,' + decimals + '})?$'), [decimals]);
 
     const [value, setValue] = useState('0');
@@ -44,7 +44,7 @@ export const NumPad: FC = () => {
 
     return (
         <div className={css.root}>
-            <div className={css.text}>Enter amount in {symbol}</div>
+            <div className={css.text}>Enter amount in Rupiah</div>
             <div className={css.value}>{value}</div>
             <div className={css.buttons}>
                 <div className={css.row}>
