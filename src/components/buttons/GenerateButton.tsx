@@ -12,9 +12,8 @@ export const GenerateButton: FC = () => {
             type="button"
             onClick={async () => {
                 const response: any = await convertRupiahToSol();
-                console.log(response?.data?.convert_cripto);
                 if (response?.status === 'success') {
-                    setAmount(new BigNumber(response?.data?.convert_cripto));
+                    setAmount(new BigNumber(response?.data?.convert_cripto?.toFixed(9)));
                 }
                 await generate();
             }}
