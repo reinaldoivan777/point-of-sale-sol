@@ -7,7 +7,7 @@
     "license": "Apache-2.0",
     "scripts": {
         "clean": "shx rm -rf dist .parcel-cache",
-        "build": "yarn clean && parcel build src/index.html",
+        "build": "yarn clean && parcel build src/index.html && cp -R ./static/_redirects ./dist",
         "start": "yarn clean && parcel src/index.html",
         "fmt": "prettier --write '{*,**/*}.{js,ts,jsx,tsx,json}'",
         "lint": "eslint . && prettier --check '{*,**/*}.{js,ts,jsx,tsx,json}'",
